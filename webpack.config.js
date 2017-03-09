@@ -15,7 +15,8 @@ export default {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.IgnorePlugin(/node-fetch/)
   ],
 
   module: {

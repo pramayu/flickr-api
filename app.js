@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/api', flickr);
+app.use('/search', flickr);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
