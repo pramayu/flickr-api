@@ -10,7 +10,7 @@ import webpackHot from 'webpack-hot-middleware';
 import webpackConf from './webpack.config';
 
 import index from './routes/index';
-import flickr from './routes/flickr';
+import unsplash from './routes/unsplash';
 
 let app = express();
 
@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/search', flickr);
+app.use('/search', unsplash);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

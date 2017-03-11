@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www --ignore src --exec babel-node"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -15,6 +16,10 @@
     "node-fetch": "^1.6.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "serve-favicon": "~2.3.0",
     "superagent": "^3.5.0"
   },
