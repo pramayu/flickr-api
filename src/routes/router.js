@@ -5,6 +5,6 @@ import RandomPage from '../components/home/random-page';
 
 export default (
     <Route path="/" component={App}>
-      <IndexRoute component={RandomPage}></IndexRoute>
+      <IndexRoute component={RandomPage} />
     </Route>
 )

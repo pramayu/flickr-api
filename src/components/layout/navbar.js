@@ -3,16 +3,22 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   render() {
     return (
-      <div className="navbar navbar-default">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <a href="#" className="navbar-brand">Selter</a>
+      <div className="navbar navbar-default custom-nav">
+        <div className="container-fluid custom-container">
+          <div className="navbar-search">
+            <form action="" id="quick" method="post">
+              <span className="loop_"></span>
+              <input type="text" name="typeahead" id="search_data" className="search-photo" autoComplete="false" spellCheck="false" placeholder="Search"/>
+            </form>
           </div>
-          <ul className="nav navbar-nav navbar-right">
-            <li>
+          <div className="navbar-header">
+            <a href="#" className="navbar-brand">SPATULAEMAK</a>
+          </div>
+          <ul className="nav navbar-nav">
+            <li className="login btr">
               <a href="#">Login</a>
             </li>
-            <li>
+            <li className="signup btr">
               <a href="#">Join</a>
             </li>
           </ul>

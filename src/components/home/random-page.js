@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import RandomList from './random-list';
+import Jumbroton from './jumbroton';
 import { getRandomPhotos } from '../../actions/unsplash';
 
 class RandomPage extends Component {
 
   componentDidMount() {
-    this.props.getRandomPhotos();
+    // this.props.getRandomPhotos();
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluidk">
+        <Jumbroton />
         <RandomList photos={this.props.photos}/>
       </div>
     )

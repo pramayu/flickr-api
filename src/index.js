@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes/router';
-
+import style from './stylesheets/style.scss';
 import router from './routes/router';
 import rootReducers from './reducers/index';
 
