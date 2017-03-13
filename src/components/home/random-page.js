@@ -8,12 +8,12 @@ import { getRandomPhotos } from '../../actions/unsplash';
 class RandomPage extends Component {
 
   componentDidMount() {
-    // this.props.getRandomPhotos();
+    this.props.getRandomPhotos();
   }
 
   render() {
     return (
-      <div className="container-fluidk">
+      <div className="container-fluidk solo">
         <Jumbroton />
         <RandomList photos={this.props.photos}/>
       </div>
