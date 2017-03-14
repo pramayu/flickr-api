@@ -12,7 +12,7 @@ export function setRandomPhotos(photos) {
 }
 
 export function getRandomPhotos() {
-  const url = `https://api.unsplash.com/photos?page=2&per_page=30&order_by=popular&client_id=${config.app_id}`;
+  const url = `https://api.unsplash.com/photos?page=1&per_page=30&order_by=popular&client_id=${config.app_id}`;
   return dispatch => {
     return axios.get(url)
       .then(photos => dispatch(setRandomPhotos(photos.data)));

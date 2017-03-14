@@ -33,32 +33,74 @@ body {
         flex: 1 9999 0%;
         min-width: 40px;
         padding-top: 12px;
-        .loop_ {
-          &:before {
-            content: "\f002";
-            font-family: "FontAwesome";
-            position: absolute;
-            font-size: 12px;
-            margin-top: 6px;
-            margin-left: 8px;
-            color: #c5c5c5;
+        ul {
+          .menu {
+            margin-right: 10px;
+            span {
+              padding: 5px 8.5px;
+              outline: none;
+              cursor: pointer;
+              border-radius: 3px;
+              background-color: #C5C5C5;
+              border: 1px solid #b3b3b3;
+              color: #fff;
+            }
           }
-        }
-        input {
-          border: solid 1px #e8eaef;
-          border-radius: 3px;
-          color: #cacaca;
-          font-size: 14px;
-          outline: none;
-          padding: 2px 10px 3px 26px;
-          z-index: 2;
-          background-color: #fff;
-          font-size: 13px;
-          font-weight: 400;
-          font-family: Roboto, Helvetica, Arial;
-          color: #999;
-          width: 45%;
-          height: 28px;
+          .srct {
+            width: 80%;
+            padding: 0px;
+            .loop_ {
+              padding: 5.5px 15px;
+              cursor: pointer;
+              border-radius: 3px;
+              background-color: #fff;
+              border: 1px solid #e8eaef;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+              &:before {
+                content: "\f002";
+                font-family: "FontAwesome";
+                position: absolute;
+                font-size: 12px;
+                margin-top: 6px;
+                margin-left: -5px;
+                color: #c5c5c5;
+              }
+            }
+            .klop {
+              padding: 0;
+              border-radius: 3px;
+              background-color: transparent;
+              border: none;
+              &:before {
+                margin-left: 8px;
+              }
+            }
+            input {
+              border: none;
+              border-color: #e8eaef;
+              border-radius: 3px;
+              color: #cacaca;
+              font-size: 14px;
+              outline: none;
+              padding: 0px;
+              z-index: 2;
+              background-color: #fff;
+              font-size: 13px;
+              font-weight: 400;
+              font-family: Roboto, Helvetica, Arial;
+              color: #999;
+              width: 0px;
+              height: 28px;
+              -webkit-transition: all .5s ease-in-out;
+              transition: all .5s ease-in-out;
+            }
+            .zro {
+              border: solid 1px #e8eaef;
+              padding: 2px 10px 3px 26px;
+              width: 45%;
+            }
+          }
         }
       }
       .navbar-header {
@@ -210,7 +252,14 @@ body {
               top:0;
               left: 5px;
               bottom: 0;
-              background-color: rgba(0,0,0,.2);
+              background-image: linear-gradient(rgba(0,0,0,0.3), rgba(255,255,255,0.01) 90%);
+              -webkit-transition: all .3s ease-in-out;
+              -moz-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out;
+              opacity: 0;
+              &:hover {
+                opacity: 1;
+              }
               .users {
                 float: left;
                 padding-left: 10px;
@@ -243,16 +292,33 @@ body {
                     position: absolute;
                     width: 18px;
                     height: 3px;
-                    background-color: #dcdcdc;
+                    background-color: #a5a5a5;
                     content: "";
-                    border: 1px solid #a5a5a5;
                     margin-left: -9px;
                     margin-top: -1px;
+                    border-radius: 4px;
                   }
                   &:after {
                     -ms-transform: rotate(45deg); /* IE 9 */
                     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
                     transform: rotate(45deg);
+                  }
+                }
+                .btn-download {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 2px;
+                  background-color: rgba(244, 244, 244, 0.9);
+                  outline: none;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #a5a5a5;
+                    border-radius: 40px;
+                    margin-top: -5px;
+                    margin-left: -5px;
                   }
                 }
               }
