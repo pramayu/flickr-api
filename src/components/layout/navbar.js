@@ -11,7 +11,8 @@ class Navbar extends Component {
               <li className="srct">
                 <form action="" id="quick" method="post">
               <span className="loop_"></span>
-              <input type="text" name="typeahead" id="search_data" className="search-photo" autoComplete="false" spellCheck="false" placeholder="Search"/>
+              <input type="text" name="typeahead" id="search_data" className="search-photo"
+                autoComplete="false" spellCheck="false" placeholder="Search"/>
             </form>
               </li>
             </ul>

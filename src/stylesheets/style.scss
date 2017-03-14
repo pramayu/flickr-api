@@ -236,6 +236,23 @@ body {
   }
 
   .solo {
+    padding-bottom: 50px;
+    .pagenation {
+      text-align: center;
+      padding-top: 50px;
+      .btn-add-page {
+        background-color: #2196f3;
+        color: #fff;
+        font-family: 'Teko', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        width: 20%;
+        border: 1px solid #1b74bb;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        outline: none;
+      }
+    }
     .grider {
       .ite-sora {
         .grids {

@@ -3,12 +3,27 @@ import { connect } from 'react-redux';
 
 import RandomList from './random-list';
 import Jumbroton from './jumbroton';
-import { getRandomPhotos } from '../../actions/unsplash';
+import { getRandomPhotos, getLoadPhotos } from '../../actions/unsplash';
 
 class RandomPage extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 2,
+      loads: {}
+    }
+  }
+
+  loadPage() {
+    this.setState({
+      page: this.state.page + 1,
+      loads: this.props.getLoadPhotos(this.state.page)
+    });
+  }
+
   componentDidMount() {
-    this.props.getRandomPhotos();
+    this.props.getRandomPhotos(this.state.page);
   }
 
   render() {
@@ -16,6 +31,9 @@ class RandomPage extends Component {
       <div className="container-fluidk solo">
         <Jumbroton />
         <RandomList photos={this.props.photos}/>
+        <div className="pagenation">
+          <button onClick={this.loadPage.bind(this)} className="btn btn-add-page">LOAD MORE</button>
+        </div>
       </div>
     )
   }
@@ -33,4 +51,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, { getRandomPhotos })(RandomPage);
+export default connect(mapStateToProps, { getRandomPhotos, getLoadPhotos })(RandomPage);
