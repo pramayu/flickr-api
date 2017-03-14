@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import Masonry from 'react-masonry-component';
 import LazyLoad from 'react-lazyload';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -9,11 +10,14 @@ const masonryOptions = {
 };
 
 class RandomCard extends Component {
+  singleLink(id) {
+    browserHistory.push(`/photo/${id}`)
+  }
   render() {
     let random = this.props.photo.map((photo, id) =>
       <div className="img_ col-md-4" key={photo.id}>
         <img src={photo.urls.small} alt={photo.user.bio}/>
-        <div className="hovr">
+        <div className="hovr" onClick={() => this.singleLink(photo.id)}>
           <div className="users">
             <img src={photo.user.profile_image.medium} alt=""/>
             <span className="name">{photo.user.name}</span>

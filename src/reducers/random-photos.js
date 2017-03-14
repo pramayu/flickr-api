@@ -1,4 +1,4 @@
-import { SET_RANDOM_PHOTOS, SET_LOAD_PHOTOS } from '../actions/unsplash';
+import { SET_RANDOM_PHOTOS, SET_LOAD_PHOTOS, SET_SINGLE_PHOTO } from '../actions/unsplash';
 
 export default (state = [], action = {}) => {
   switch(action.type) {
@@ -10,6 +10,10 @@ export default (state = [], action = {}) => {
       return [
         ...state,
         action.photos
+      ]
+    case SET_SINGLE_PHOTO:
+      return [
+        action.photo
       ]
     default:
       return state;

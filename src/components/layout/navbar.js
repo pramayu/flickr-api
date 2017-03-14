@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Navbar extends Component {
   render() {
@@ -7,7 +8,15 @@ class Navbar extends Component {
         <div className="container-fluid custom-container">
           <div className="navbar-search">
             <ul className="list-inline">
-              <li className="menu"><span className="fa fa-ellipsis-h" aria-hidden="true"></span></li>
+              <li className="menu">
+                <span className="fa fa-ellipsis-h" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+                <ul className="dropdown-menu ciecie" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Popular</a></li>
+                  <li><a href="#">Latest</a></li>
+                  <li><a href="#">Explore</a></li>
+                  <li><a href="#">Collections</a></li>
+                </ul>
+              </li>
               <li className="srct">
                 <form action="" id="quick" method="post">
               <span className="loop_"></span>
@@ -18,7 +27,7 @@ class Navbar extends Component {
             </ul>
           </div>
           <div className="navbar-header">
-            <a href="#" className="navbar-brand">SPATULAEMAK</a>
+            <Link to="/" className="navbar-brand">SPATULAEMAK</Link>
           </div>
           <ul className="nav navbar-nav">
             <li className="login btr">
