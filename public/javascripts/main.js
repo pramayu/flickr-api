@@ -4,5 +4,5 @@ $(document).ready(function(){
     $(this).toggleClass('klop');
     $('#search_data').toggleClass('zro');
   });
-  
+
 });

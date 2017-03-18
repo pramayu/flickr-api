@@ -1,11 +1,10 @@
-import { SET_SINGLE_COLLECTS } from '../actions/collects';
-
+import { SET_INSIDE_COLLECTION } from '../actions/inside-collection';
 
 export default (state = [], action = {}) => {
   switch(action.type) {
-    case SET_SINGLE_COLLECTS:
+    case SET_INSIDE_COLLECTION:
       return [
-        action.collects
+        action.collections
       ]
     default:
       return state;

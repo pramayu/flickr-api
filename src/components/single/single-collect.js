@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
+import _ from 'lodash';
 
 class SingleCollect extends Component {
 
   collectionLink(id, slug) {
-    const new_slug = slug.replace(/\s+/g, '-').toLowerCase();
+    const new_slug = slug.replace(/[/\s+\.#?_@<>]/g, '-').toLowerCase();
     browserHistory.push(`/collections/${id}/${new_slug}`)
   }
 
@@ -18,7 +19,7 @@ class SingleCollect extends Component {
 
     return (
       <div className="conf">
-        <div className="col-md-4 cler" style={ collection.cover_photo === null ? '':inlineStyle }>
+        <div className="col-md-4 cler" style={ _.isEmpty(collection.cover_photo) === true ? '' : inlineStyle }>
           <div className="dfhk" onClick={() => this.collectionLink(collection.id, collection.title)}>
             <div className="imre">
               <img src={ collection.user.profile_image.medium } alt=""/>
