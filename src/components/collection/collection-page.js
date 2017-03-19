@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Masonry from 'react-masonry-component';
+import classnames from 'classnames';
 
 import CollectionUser from './collection-user';
 import CollectionList from './collection-list';
-import { getInsideCollection, getMomCollection } from '../../actions/inside-collection';
+import { getInsideCollection, getMomCollection, getLoadPhoto } from '../../actions/inside-collection';
 
 const masonryOptions = {
     transitionDuration: 0
@@ -15,7 +16,9 @@ class CollectionPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      total_photos: 0
+      total_photos: 0,
+      max_photos: 30,
+      page: 2
     }
   }
 
@@ -28,6 +31,14 @@ class CollectionPage extends Component {
     this.props.user.map((user) => {
       this.setState({ total_photos: user.total_photos })
     })
+  }
+
+  handleOnLoad() {
+    this.setState({
+      page: this.state.page + 1,
+      max_photos: this.state.max_photos + (this.state.total_photos - 30)
+    });
+    this.props.getLoadPhoto(this.props.params.id, this.state.page);
   }
 
   render() {
@@ -52,8 +63,8 @@ class CollectionPage extends Component {
         <Masonry className={'gridk bar'} elementType={'ul'} options={masonryOptions} disableImagesLoaded={false} updateOnEachImageLoad={false} >
           { collection }
         </Masonry>
-        <div className="btn-more">
-          <button className="btn btn-mre">LOAD MORE</button>
+        <div className={ classnames ('btn-more',{ btn_hide: this.state.total_photos <= 30, btn_hide: this.state.total_photos === this.state.max_photos })}>
+          <button className="btn btn-mre" onClick={ () => this.handleOnLoad() }>LOAD MORE</button>
         </div>
       </div>
     )
@@ -67,4 +78,6 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getInsideCollection, getMomCollection })(CollectionPage);
+export default connect(mapStateToProps, {
+  getInsideCollection, getMomCollection, getLoadPhoto })
+  (CollectionPage);

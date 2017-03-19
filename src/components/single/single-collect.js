@@ -19,7 +19,7 @@ class SingleCollect extends Component {
 
     return (
       <div className="conf">
-        <div className="col-md-4 cler" style={ _.isEmpty(collection.cover_photo) === true ? '' : inlineStyle }>
+        <div className="col-md-4 cler" style={ collection.cover_photo.length === 0 ? '' : inlineStyle }>
           <div className="dfhk" onClick={() => this.collectionLink(collection.id, collection.title)}>
             <div className="imre">
               <img src={ collection.user.profile_image.medium } alt=""/>
