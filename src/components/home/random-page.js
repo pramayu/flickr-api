@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import Masonry from 'react-masonry-component';
 import RandomList from './random-list';
 import Jumbroton from './jumbroton';
 import { getRandomPhotos, getLoadPhotos } from '../../actions/unsplash';
+
+const masonryOptions = {
+    transitionDuration: 0
+};
 
 class RandomPage extends Component {
 
@@ -27,10 +31,19 @@ class RandomPage extends Component {
   }
 
   render() {
+    let photos = (
+      this.props.photos.map((photos) =>
+        photos.map((photo, id) =>
+          <RandomList photo={photo} key={id} />
+        )
+      )
+    )
     return (
-      <div className="container-fluidk solo">
+      <div className="container-fluid solo">
         <Jumbroton />
-        <RandomList photos={this.props.photos}/>
+        <Masonry className={'gridk bar'} elementType={'ul'} options={masonryOptions} disableImagesLoaded={false} updateOnEachImageLoad={false} >
+          { photos }
+        </Masonry>
         <div className="pagenation">
           <button onClick={this.loadPage.bind(this)} className="btn btn-add-page">LOAD MORE</button>
         </div>
