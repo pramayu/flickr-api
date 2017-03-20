@@ -669,7 +669,7 @@ body {
           top: 0;
           left:3px;
           bottom: 0;
-          background-color: rgba(0, 0, 0, .3);
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.01));
           z-index: 99;
           opacity: 0;
           -webkit-transition: all .3s ease-in-out;
@@ -689,6 +689,106 @@ body {
               font-family: 'Teko', sans-serif;
               font-weight: 500;
               color: #fff;
+              font-size: 14px;
+              text-transform: capitalize;
+            }
+          }
+          .collect {
+            float: right;
+            padding-top: 15px;
+            padding-right: 10px;
+            ul {
+              li {
+                .btn-collect {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 2px;
+                  background-color: rgba(244, 244, 244, 0.9);
+                  outline: none;
+                  &:before, &:after {
+                    position: absolute;
+                    width: 18px;
+                    height: 3px;
+                    background-color: #a5a5a5;
+                    content: "";
+                    margin-left: -9px;
+                    margin-top: -1px;
+                    border-radius: 4px;
+                  }
+                  &:after {
+                    -ms-transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                  }
+                }
+                .btn-download {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 2px;
+                  background-color: rgba(244, 244, 244, 0.9);
+                  outline: none;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #a5a5a5;
+                    border-radius: 40px;
+                    margin-top: -5px;
+                    margin-left: -5px;
+                  }
+                }
+              }
+            }
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .boo_ {
+    padding: 80px 0px;
+    width: 98%;
+    .nerw {
+      list-style: none;
+      padding: 0px;
+      .hooo {
+        padding: 0px;
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+        margin-bottom: 5px;
+        .ku {
+          width: 100%;
+        }
+        .hovr {
+          position: absolute;
+          cursor: pointer;
+          width: 434px;
+          top: 0;
+          left: 3px;
+          bottom: 0;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.01) 90%);
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+          opacity: 0;
+          .users {
+            float: left;
+            padding-left: 10px;
+            padding-top: 10px;
+            img {
+              width: 32px;
+              border-radius: 50px;
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+              margin-right: 10px;
+            }
+            .name {
+              font-family: 'Teko', 'Roboto', sans-serif;
+              color: #fff;
+              font-weight: 500;
               font-size: 14px;
               text-transform: capitalize;
             }

@@ -17,7 +17,7 @@ class CollectionPage extends Component {
     super(props);
     this.state = {
       total_photos: 0,
-      max_photos: 30,
+      max_photos: 0,
       page: 2
     }
   }
@@ -63,7 +63,7 @@ class CollectionPage extends Component {
         <Masonry className={'gridk bar'} elementType={'ul'} options={masonryOptions} disableImagesLoaded={false} updateOnEachImageLoad={false} >
           { collection }
         </Masonry>
-        <div className={ classnames ('btn-more',{ btn_hide: this.state.total_photos <= 30, btn_hide: this.state.total_photos === this.state.max_photos })}>
+        <div className={ classnames ('btn-more',{ btn_hide: this.state.total_photos <= 30 })}>
           <button className="btn btn-mre" onClick={ () => this.handleOnLoad() }>LOAD MORE</button>
         </div>
       </div>

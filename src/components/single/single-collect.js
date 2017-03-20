@@ -4,6 +4,13 @@ import _ from 'lodash';
 
 class SingleCollect extends Component {
 
+  componentDidMount() {
+    if(this.props.collection.cover_photo === null ) {
+      window.location.reload();
+    }
+  }
+
+
   collectionLink(id, slug) {
     const new_slug = slug.replace(/[/\s+\.#?_@<>]/g, '-').toLowerCase();
     browserHistory.push(`/collections/${id}/${new_slug}`)
@@ -12,14 +19,13 @@ class SingleCollect extends Component {
   render() {
 
     const { collection, id } = this.props;
-
     const inlineStyle = {
       backgroundImage: 'url(' + collection.cover_photo.urls.small + ')',
     }
 
     return (
       <div className="conf">
-        <div className="col-md-4 cler" style={ collection.cover_photo.length === 0 ? '' : inlineStyle }>
+        <div className="col-md-4 cler" style={ inlineStyle }>
           <div className="dfhk" onClick={() => this.collectionLink(collection.id, collection.title)}>
             <div className="imre">
               <img src={ collection.user.profile_image.medium } alt=""/>
