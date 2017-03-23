@@ -4,12 +4,6 @@ import _ from 'lodash';
 
 class SingleCollect extends Component {
 
-  componentDidMount() {
-    if(this.props.collection.cover_photo === null ) {
-      window.location.reload();
-    }
-  }
-
 
   collectionLink(id, slug) {
     const new_slug = slug.replace(/[/\s+\.#?_@<>]/g, '-').toLowerCase();

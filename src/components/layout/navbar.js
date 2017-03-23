@@ -11,8 +11,8 @@ class Navbar extends Component {
               <li className="menu">
                 <span className="fa fa-ellipsis-h" aria-hidden="true" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
                 <ul className="dropdown-menu ciecie" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">Popular</a></li>
-                  <li><a href="#">Latest</a></li>
+                  <li><a href="/photos/popular">Popular</a></li>
+                  <li><a href="/photos/latest">Latest</a></li>
                   <li><a href="#">Explore</a></li>
                   <li><a href="#">Collections</a></li>
                 </ul>
