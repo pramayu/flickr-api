@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import SearchForm from '../search/search-form';
 
 class Navbar extends Component {
   render() {
@@ -18,11 +19,7 @@ class Navbar extends Component {
                 </ul>
               </li>
               <li className="srct">
-                <form action="" id="quick" method="post">
-              <span className="loop_"></span>
-              <input type="text" name="typeahead" id="search_data" className="search-photo"
-                autoComplete="false" spellCheck="false" placeholder="Search"/>
-            </form>
+                <SearchForm />
               </li>
             </ul>
           </div>

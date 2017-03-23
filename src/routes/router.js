@@ -5,6 +5,7 @@ import RandomPage from '../components/home/random-page';
 import SinglePage from '../components/single/single-page';
 import CollectionPage from '../components/collection/collection-page';
 import BrowserPage from '../components/browse/browse-page';
+import SearchPage from '../components/search/search-page';
 
 export default (
     <Route path="/" component={App}>
@@ -12,5 +13,6 @@ export default (
       <Route path="photo/:id" component={SinglePage} />
       <Route path="collections/:id/:slug" component={CollectionPage} />
       <Route path="photos/:term" component={BrowserPage} />
+      <Route path="search/:term" component={SearchPage} />
     </Route>
 )
