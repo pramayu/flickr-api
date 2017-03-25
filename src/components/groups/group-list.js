@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
-import _ from 'lodash';
 
-class SingleCollect extends Component {
-
-
+class GroupList extends Component {
   collectionLink(id, slug) {
     const new_slug = slug.replace(/[/\s+\.#?_@<>]/g, '-').toLowerCase();
     browserHistory.push(`/collections/${id}/${new_slug}`)
   }
-
   render() {
-
-    const { collection, id } = this.props;
+    const { collection } = this.props;
     const inlineStyle = {
       backgroundImage: 'url(' + collection.cover_photo.urls.small + ')',
     }
-
     return (
-      <div className="conf foi">
+      <div className="conf">
         <div className="col-md-4 cler" style={ inlineStyle }>
-          <div className="dfhk" onClick={() => this.collectionLink(collection.id, collection.title)}>
+          <div className="dfhk omh" onClick={() => this.collectionLink(collection.id, collection.title)}>
             <div className="imre">
               <img src={ collection.user.profile_image.medium } alt=""/>
               <span className="ng-name">{ collection.user.name }</span>
@@ -39,4 +33,4 @@ class SingleCollect extends Component {
   }
 }
 
-export default SingleCollect;
+export default GroupList;

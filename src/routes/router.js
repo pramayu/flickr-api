@@ -6,6 +6,7 @@ import SinglePage from '../components/single/single-page';
 import CollectionPage from '../components/collection/collection-page';
 import BrowserPage from '../components/browse/browse-page';
 import SearchPage from '../components/search/search-page';
+import GroupPage from '../components/groups/group-page';
 
 export default (
     <Route path="/" component={App}>
@@ -14,5 +15,6 @@ export default (
       <Route path="collections/:id/:slug" component={CollectionPage} />
       <Route path="photos/:term" component={BrowserPage} />
       <Route path="search/:term" component={SearchPage} />
+      <Route path="collections" component={GroupPage} />
     </Route>
 )

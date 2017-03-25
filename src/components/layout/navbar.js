@@ -14,7 +14,6 @@ class Navbar extends Component {
                 <ul className="dropdown-menu ciecie" aria-labelledby="dropdownMenu1">
                   <li><a href="/photos/popular">Popular</a></li>
                   <li><a href="/photos/latest">Latest</a></li>
-                  <li><a href="#">Explore</a></li>
                   <li><a href="#">Collections</a></li>
                 </ul>
               </li>

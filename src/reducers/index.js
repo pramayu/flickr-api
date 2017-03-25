@@ -6,6 +6,7 @@ import inside_collections from './inside-collection';
 import browse_collections from './browse-collection';
 import browse from './browse';
 import search from './search';
+import group from './group';
 
 export default combineReducers({
   random_photos,
@@ -14,5 +15,6 @@ export default combineReducers({
   inside_collections,
   browse_collections,
   browse,
-  search
+  search,
+  group
 });

@@ -9,6 +9,78 @@ body {
 }
 
 @media(min-width: 768px) {
+  .conf {
+    .cler {
+      height: 250px;
+      width: calc((100% - 30px) / 3);
+      position: relative;
+      border-radius: 3px;
+      background-size: cover;
+      background-position: 50%;
+      margin-bottom: 10px;
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+      .dfhk {
+        width: 370px;
+        height: 250px;
+        position: absolute;
+        background-color: rgba(0,0,0,.35);
+        z-index: 20;
+        margin-left: -15px;
+        border-radius: 3px;
+        .imre {
+          float: left;
+          padding-left: 10px;
+          padding-top: 10px;
+          img {
+            width: 32px;
+            border-radius: 100%;
+            box-shadow: 0 0 1px rgba(0,0,0,.5);
+            margin-right: 8px;
+          }
+          .ng-name {
+            color: #fff;
+            font-weight: 500;
+            text-transform: capitalize;
+            font-family: 'Teko', sans-serif;
+            font-size: 16px;
+          }
+        }
+        .oer {
+          float: right;
+          padding-top: 15px;
+          padding-right: 10px;
+          span {
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Teko', sans-serif;
+            font-size: 16px;
+          }
+        }
+        .beft {
+          text-align: center;
+          padding-top: 18.5%;
+          opacity: 0;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+          .newp {
+            font-size: 29px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .7);
+            text-transform: capitalize;
+            font-family: 'Teko', sans-serif;
+          }
+        }
+        &:hover {
+          .beft {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
   .custom-nav {
     background-color: #fafafa;
     border-radius: 0px;
@@ -59,6 +131,7 @@ body {
               -webkit-transition: all .25s cubic-bezier(.24,.22,.015,1.56),opacity .1s ease-in-out;
               transition: all .25s cubic-bezier(.24,.22,.015,1.56),opacity .1s ease-in-out;
               -webkit-transform: scale(.8) translate(-10%,-10%);
+              z-index: 99999;
               transform: scale(.8) translate(-10%,-10%);
               li {
                 padding-top: 3px;
@@ -529,78 +602,7 @@ body {
           font-family: 'Teko', sans-serif;
         }
         .more_ {
-          .conf {
-            .cler {
-              height: 250px;
-              width: calc((100% - 30px) / 3);
-              position: relative;
-              border-radius: 3px;
-              background-size: cover;
-              background-position: 50%;
-              margin-bottom: 10px;
-              display: inline-block;
-              margin-left: 5px;
-              margin-right: 5px;
-              .dfhk {
-                width: 370px;
-                height: 250px;
-                position: absolute;
-                background-color: rgba(0,0,0,.35);
-                z-index: 20;
-                margin-left: -15px;
-                border-radius: 3px;
-                .imre {
-                  float: left;
-                  padding-left: 10px;
-                  padding-top: 10px;
-                  img {
-                    width: 32px;
-                    border-radius: 100%;
-                    box-shadow: 0 0 1px rgba(0,0,0,.5);
-                    margin-right: 8px;
-                  }
-                  .ng-name {
-                    color: #fff;
-                    font-weight: 500;
-                    text-transform: capitalize;
-                    font-family: 'Teko', sans-serif;
-                    font-size: 16px;
-                  }
-                }
-                .oer {
-                  float: right;
-                  padding-top: 15px;
-                  padding-right: 10px;
-                  span {
-                    color: #fff;
-                    font-weight: 500;
-                    font-family: 'Teko', sans-serif;
-                    font-size: 16px;
-                  }
-                }
-                .beft {
-                  text-align: center;
-                  padding-top: 18.5%;
-                  opacity: 0;
-                  -webkit-transition: all .3s ease-in-out;
-                  -moz-transition: all .3s ease-in-out;
-                  transition: all .3s ease-in-out;
-                  .newp {
-                    font-size: 29px;
-                    font-weight: 600;
-                    color: rgba(255, 255, 255, .7);
-                    text-transform: capitalize;
-                    font-family: 'Teko', sans-serif;
-                  }
-                }
-                &:hover {
-                  .beft {
-                    opacity: 1;
-                  }
-                }
-              }
-            }
-          }
+          @extend .conf;
         }
       }
     }
@@ -878,6 +880,56 @@ body {
       h1 {
         color: #5f5f5f !important;
         text-shadow: none !important;
+      }
+    }
+  }
+
+  .njir {
+    .myboo {
+      background-image: url('/images/default/foo.jpeg') !important;
+      border: none !important;
+      h1 {
+        color: rgba(255, 255, 255, 0.8) !important;
+        text-shadow: none !important;
+        text-transform: capitalize !important;
+        letter-spacing: normal !important;
+        font-size: 39px !important;
+      }
+      .myboo-container {
+        background-color: rgba(0, 0, 0, .15) !important;
+        height: 500px !important;
+        .btn-foo {
+          background-color: #1fb9ff !important;
+          color: #fff !important;
+          border: 1px solid #049de2 !important;
+        }
+      }
+    }
+  }
+  ._poo {
+    padding-bottom: 50px;
+    @extend .conf;
+    .foi {
+      padding-left: .8%;
+      padding-right: .8%;
+    }
+    .omh {
+      width: 433px !important;
+    }
+    .btn-more {
+      padding-top: 50px;
+      text-align: center;
+      .btn-mre {
+        background-color: #2196f3;
+        color: #fff;
+        font-family: 'Teko', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        width: 20%;
+        border: 1px solid #1b74bb;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        outline: none;
       }
     }
   }
